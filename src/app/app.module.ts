@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MatVideoModule } from 'mat-video';
+// import { MatVideoModule } from 'mat-video';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { MatVideoModule } from 'mat-video';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatVideoModule
+    // MatVideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
