@@ -1,0 +1,60 @@
+<p>custom-video works!</p>
+
+
+<!-- <div class="player-wrapper">
+
+    <h3>Simple Video Player</h3>
+    <vg-player>
+
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+    
+
+
+        <vg-controls>
+            <vg-play-pause></vg-play-pause>
+            <vg-playback-button></vg-playback-button>
+    
+    
+            <vg-track-selector></vg-track-selector>
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+    
+            <vg-fullscreen></vg-fullscreen>
+        </vg-controls>
+
+
+      <video #media id="singleVideo" preload="auto" controls>s
+        <source src="https://www.ibrahimabah.com/ibfilms/Harry.Potter-The.Ultimate.Collection.%20I%20-%20VIII%20.%202001-2011.1080p.Bluray.x264.anoXmous/Harry%20Potter%203/Harry.Potter.And.The.Prisoner.Of.Azkaban.2004.UEE.1080p.Bluray.x264.anoXmous_.mp4" type="video/mp4">
+      </video>
+    </vg-player>
+
+  </div> -->
+
+  <vg-player>
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+
+    <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-playback-button></vg-playback-button>
+
+
+        <vg-track-selector></vg-track-selector>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" >
+        <source src="https://www.ibrahimabah.com/ibfilms/Harry.Potter-The.Ultimate.Collection.%20I%20-%20VIII%20.%202001-2011.1080p.Bluray.x264.anoXmous/Harry%20Potter%203/Harry.Potter.And.The.Prisoner.Of.Azkaban.2004.UEE.1080p.Bluray.x264.anoXmous_.mp4" type="video/mp4">
+    </video>
+</vg-player>
