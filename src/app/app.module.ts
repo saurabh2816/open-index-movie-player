@@ -5,6 +5,7 @@ import { VgBufferingModule, VgControlsModule, VgCoreModule, VgOverlayPlayModule 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomVideoComponent } from './custom-video/custom-video.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -12,6 +13,7 @@ import { CustomVideoComponent } from './custom-video/custom-video.component';
   declarations: [
     AppComponent,
     CustomVideoComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
