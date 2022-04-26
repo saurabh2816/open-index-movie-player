@@ -1,0 +1,19 @@
+<div class="container" *ngFor="let movie of data; index as i" >
+    <div class="item" 
+        [style.background-image]="'url(' + movie.info.Poster + ')'"
+        (click)="openMovie(movie.url, i)"
+        >
+        {{movie.info.Title}} :  {{movie.info.imdbRating}}
+   
+            <app-custom-video *ngIf="i==currentMovieClicked" [url]="currentMovieUrl"></app-custom-video> 
+
+            <!-- <div class="item-top" [style.background-image]="'url(' + movie.info.Poster + ')'">
+
+            </div>
+            <div class="item-bottom">
+                <mat-icon>home</mat-icon>
+            </div>
+             -->
+
+    </div>
+</div>

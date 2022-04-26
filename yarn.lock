@@ -128,12 +128,21 @@
     "ora" "5.4.1"
     "rxjs" "6.6.7"
 
-"@angular/animations@~13.3.0", "@angular/animations@13.3.3":
+"@angular/animations@^13.0.0 || ^14.0.0-0", "@angular/animations@~13.3.0", "@angular/animations@13.3.3":
   "integrity" "sha512-rP1e0XYjHxPCnvSN3k0ZCBTfIvpKbFI8fxlZMD85PI9HAko5Dc1Y5XCWrcMzdCF4C5nfqbzfzuZke5H3Y46AVQ=="
   "resolved" "https://registry.npmjs.org/@angular/animations/-/animations-13.3.3.tgz"
   "version" "13.3.3"
   dependencies:
     "tslib" "^2.3.0"
+
+"@angular/cdk@13.3.4":
+  "integrity" "sha512-im4LKxJaIuqFVzmtf650PoiYsn/SZlvBV2zEgzusK8HwQ24C1Lya7NQSApwl8k43h4eKO1OvUKBjqL5uDgEQag=="
+  "resolved" "https://registry.npmjs.org/@angular/cdk/-/cdk-13.3.4.tgz"
+  "version" "13.3.4"
+  dependencies:
+    "tslib" "^2.3.0"
+  optionalDependencies:
+    "parse5" "^5.0.0"
 
 "@angular/cli@~13.3.3":
   "integrity" "sha512-a+nnzFP1FfnypXpAhrHbIBaJcxzegWLZUvVzJQwt6P2z60IoHdvTVmyNbY89qI0LE1SrAokEUO1zW3Yjmu7fUw=="
@@ -160,7 +169,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@^13.2.2", "@angular/common@~13.3.0", "@angular/common@13.3.3":
+"@angular/common@^13.0.0 || ^14.0.0-0", "@angular/common@^13.2.2", "@angular/common@~13.3.0", "@angular/common@13.3.3":
   "integrity" "sha512-W5rZyuilGAA+tHoTbvHHu11efUBssiiX9BKg2rQAwbdnG+hZfNs0ze28Y+2bwjTDkbLsXsQwm30gs2uie7aMyA=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-13.3.3.tgz"
   "version" "13.3.3"
@@ -190,17 +199,24 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/core@^13.2.2", "@angular/core@~13.3.0", "@angular/core@13.3.3":
+"@angular/core@^13.0.0 || ^14.0.0-0", "@angular/core@^13.2.2", "@angular/core@~13.3.0", "@angular/core@13.3.3":
   "integrity" "sha512-zVsAuR1qT2QEUXDk8ANs+pCnxH7ckKAD+rJXoxI1Br94Ey1o7lNXu/GPJtTqxDbsRd7sGqMMQRti36t2CA5QhA=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-13.3.3.tgz"
   "version" "13.3.3"
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/forms@~13.3.0":
+"@angular/forms@^13.0.0 || ^14.0.0-0", "@angular/forms@~13.3.0":
   "integrity" "sha512-C89b7Uu7Acpm+0/JDczIqhNJTEJPdskmnx7AybAoSfBPs9QUSP8irRFKY7UtmE8E/Q2m03xqWRDa8CpP9Rt6Hw=="
   "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-13.3.3.tgz"
   "version" "13.3.3"
+  dependencies:
+    "tslib" "^2.3.0"
+
+"@angular/material@^13.3.4":
+  "integrity" "sha512-jK9rWmBaPrE+3re6uIdyvG5DCzc47VUvnP1DqblNnpaa8GCKllb1cFRGqa5GPYB1/96d3wO+RPwzhC06qqV+yw=="
+  "resolved" "https://registry.npmjs.org/@angular/material/-/material-13.3.4.tgz"
+  "version" "13.3.4"
   dependencies:
     "tslib" "^2.3.0"
 
@@ -211,7 +227,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/platform-browser@~13.3.0", "@angular/platform-browser@13.3.3":
+"@angular/platform-browser@^13.0.0 || ^14.0.0-0", "@angular/platform-browser@~13.3.0", "@angular/platform-browser@13.3.3":
   "integrity" "sha512-feVOGwjAZOR4aObjcEaXsj1NH6021sv0bWKSGBVNrR0RuHBXVfF0vRPAhdq3IAL1OcutriHGR52KS7t5x+nChw=="
   "resolved" "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-13.3.3.tgz"
   "version" "13.3.3"
@@ -3135,6 +3151,11 @@
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
   "version" "1.14.9"
 
+"font-awesome@^4.7.0":
+  "integrity" "sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM="
+  "resolved" "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
+  "version" "4.7.0"
+
 "forwarded@0.2.0":
   "integrity" "sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow=="
   "resolved" "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
@@ -4184,6 +4205,11 @@
     "socks-proxy-agent" "^6.0.0"
     "ssri" "^8.0.0"
 
+"material-icons@^1.10.8":
+  "integrity" "sha512-CbtQXCmC9MXIIkz/0CmEfxELosxKxLegrjoa0mxM0zPA+GgAuhnWX6ITo/5oON/JFaCi/bh4MydEUNu0erbaxw=="
+  "resolved" "https://registry.npmjs.org/material-icons/-/material-icons-1.10.8.tgz"
+  "version" "1.10.8"
+
 "media-typer@0.3.0":
   "integrity" "sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g="
   "resolved" "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
@@ -4783,6 +4809,11 @@
   "version" "6.0.1"
   dependencies:
     "parse5" "^6.0.1"
+
+"parse5@^5.0.0":
+  "integrity" "sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug=="
+  "resolved" "https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz"
+  "version" "5.1.1"
 
 "parse5@^6.0.1":
   "integrity" "sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw=="
