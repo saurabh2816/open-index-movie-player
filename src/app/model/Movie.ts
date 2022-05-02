@@ -1,6 +1,6 @@
 import { Rating } from "./Rating"
 
-export interface ImdbMovie {
+export interface ImdbMovieEntity {
     title: string ,
     year: string ,
     rated: string ,
@@ -28,6 +28,6 @@ export interface ImdbMovie {
     response: string
 }
 export interface Movie {
-    info: ImdbMovie,
+    info: ImdbMovieEntity,
     url: string
 }

@@ -1,6 +1,6 @@
 <div class="container" *ngFor="let movie of data; index as i" >
     <div class="item" 
-        [style.background-image]="'url(' + movie.info.Poster + ')'"
+        [style.background-image]="'url(' + movie.info.poster + ')'"
         (click)="openMovie(movie.url, i)"
         >
         {{movie.info.Title}} :  {{movie.info.imdbRating}}
@@ -13,7 +13,12 @@
             <div class="item-bottom">
                 <mat-icon>home</mat-icon>
             </div>
+             --> 
+             <!-- <div class="bottom"> 
+                <div class="name">Being Charlie : 6.2</div>
+                <div class="genre">Comedy</div>
+                <div class="year">2020<div>
+            </div>
              -->
-
     </div>
 </div>

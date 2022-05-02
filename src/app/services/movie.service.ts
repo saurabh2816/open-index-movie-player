@@ -11,8 +11,8 @@ export class MovieService {
 
     constructor(private http: HttpClient) {}
 
-    public getMovies(): Observable<Movie[]> {
-        return this.http.get<Movie[]>(this.apiURL + '/getOne')
+    getMovies(): Observable<Movie[]> {
+        return this.http.get<Movie[]>(this.apiURL + 'getOne')
         .pipe(retry(1), catchError(this.handleError))
     }
 

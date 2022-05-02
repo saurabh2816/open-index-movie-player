@@ -7,15 +7,19 @@ import {MovieService} from '../services/movie.service';
 })
 export class HomeComponent implements OnInit {
 
-  movieList: any[] = [];
+  movieList: any;
+  getMoviesLoaded: boolean = false;
 
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
 
+    this.getMoviesLoaded = false;
+
     this.movieService.getMovies().subscribe( data => {
-      console.log(data);
+      console.log("home: ", data);
        this.movieList = data;
+       this.getMoviesLoaded = true;
     })
   } 
 }
