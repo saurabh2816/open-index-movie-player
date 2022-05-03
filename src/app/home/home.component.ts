@@ -9,17 +9,18 @@ export class HomeComponent implements OnInit {
 
   movieList: any;
   getMoviesLoaded: boolean = false;
+  defaultCardPoster: string = "saurabhrana.com";
 
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
 
-    this.getMoviesLoaded = false;
+    this.getMoviesLoaded = true;
 
-    this.movieService.getMovies().subscribe( data => {
-      console.log("home: ", data);
-       this.movieList = data;
-       this.getMoviesLoaded = true;
-    })
+  //   this.movieService.getMovies().subscribe( data => {
+  //     console.log("home: ", data);
+  //      this.movieList = data;
+  //      this.getMoviesLoaded = true;
+  //   })
   } 
 }

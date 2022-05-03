@@ -1,24 +1,48 @@
-<div class="container" *ngFor="let movie of data; index as i" >
+<!-- <div class="container" *ngFor="let movie of data; index as i" >
     <div class="item" 
-        [style.background-image]="'url(' + movie.info.poster + ')'"
         (click)="openMovie(movie.url, i)"
         >
         {{movie.info.Title}} :  {{movie.info.imdbRating}}
-   
+        <img src={{movie.info.poster}} onError="this.src='https://savethesumatrantigerfmp.weebly.com/uploads/5/0/7/6/50766355/7434310.jpg?263'"/>
             <app-custom-video *ngIf="i==currentMovieClicked" [url]="currentMovieUrl"></app-custom-video> 
 
-            <!-- <div class="item-top" [style.background-image]="'url(' + movie.info.Poster + ')'">
-
-            </div>
-            <div class="item-bottom">
-                <mat-icon>home</mat-icon>
-            </div>
-             --> 
-             <!-- <div class="bottom"> 
-                <div class="name">Being Charlie : 6.2</div>
-                <div class="genre">Comedy</div>
-                <div class="year">2020<div>
-            </div>
-             -->
     </div>
-</div>
+</div> -->
+
+<div class='card'> 
+    <div class='card-preview-video'>
+      <video autoplay muted src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'></video>
+     </div>
+    
+    <div class='card-details'>
+      <div class='card-actions'>
+        <button class='btn btn-icon btn-primary'>
+          <svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z" fill="currentColor"></path></svg>
+        </button>
+  
+        <button class='btn btn-icon btn-secondary'>
+          <svg viewBox="0 0 24 24"><path d="M13 11h8v2h-8v8h-2v-8H3v-2h8V3h2v8z" fill="currentColor"></path></svg>
+        </button>
+  
+  
+        <button class='btn btn-icon btn-secondary'>
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M5.689 7.924L4.387 9.442 12.038 16l7.651-6.558-1.302-1.518-6.349 5.442z"></path></svg>
+        </button>
+      </div>
+  
+      <div class='card-info'>
+        <span class='match-score'>97% Match</span>
+        <span class='maturity-rating'>18+</span>
+        <span>6 Seasons</span>
+        <span class='feature'>HD</span>
+      </div>
+  
+      <div class='card-tags'>
+        <span>Slick</span>
+        <span>Irreverent</span>
+        <span>Exciting</span>
+      </div>
+    </div>
+  </div>
+  
+  

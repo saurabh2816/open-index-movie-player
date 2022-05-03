@@ -36,3 +36,157 @@
   z-index: 10;
 }
  
+
+// new codepen netflix card 
+:root {
+  --color-primary-400: rgba(255,255,255,0.5);
+  --color-primary-600: rgba(255,255,255,0.8);
+  --color-primary-700: rgba(255,255,255,1);
+}
+
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #202020;
+}
+
+
+.card {
+  width: 373px;
+  color: white;
+  background: #181818;
+  border-radius: 8px;
+  font-size: 16px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+.card-preview-video {
+  position: relative;
+  height: 210px;
+}
+
+.card-preview-video img {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 50px;
+  height: 25px;
+  background: transparent;
+}
+
+.card-preview-video video {
+  max-width: 100%;
+}
+
+.card-details {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.card-actions > button:last-child {
+  margin-left: auto;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.match-score {
+  color: #46d369;
+}
+
+.maturity-rating {
+  border: 1px solid var(--color-primary-400);
+  padding: 1px 6px;
+}
+
+.feature {
+  padding: 1px 6px;
+  font-size: 11px;
+  border: 1px solid var(--color-primary-400);
+  border-radius: 2px;
+}
+
+.card-tags > span:not(:last-child)::after {
+  content: '•';
+  margin-left: 5px;
+  color: var(--color-primary-400);
+}
+
+/* Стили кнопок */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.btn-icon {
+  border-radius: 50%;
+}
+
+.btn-icon > svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.btn-primary {
+  color: black;
+  background: white;
+  border-color: var(--color-primary-700);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-600);
+}
+
+.btn-secondary {
+  color: white;
+  background-color: rgba(42,42,42,.6);
+  border-color: var(--color-primary-400);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary-700);
+}
+
+
+
+/* NEW CSS */
+.card:hover {
+  transition: transform .5s;
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);  
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.card-details {
+  display: none;
+}
+
+.card:hover .card-details{
+  display: grid !important;
+  z-index: 10;
+}
