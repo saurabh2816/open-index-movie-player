@@ -9,10 +9,13 @@
     </div>
 </div> -->
 
-<div class='card'> 
-    <div class='card-preview-video'>
-      <video autoplay muted src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'></video>
-     </div>
+<!-- 
+  old code before bootstrap carousel 
+  <div class='card' *ngFor="let movie of data"> 
+    <div class='card-preview-video' [ngStyle]="{background: 'url(' + movie.poster + ')'}">
+       <video autoplay muted src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'></video> 
+       <img src={{d.info.poster}}/> 
+     </div> 
     
     <div class='card-details'>
       <div class='card-actions'>
@@ -38,11 +41,9 @@
       </div>
   
       <div class='card-tags'>
-        <span>Slick</span>
-        <span>Irreverent</span>
-        <span>Exciting</span>
+        <span>{{movie.genre}}</span>
       </div>
     </div>
-  </div>
+  </div> -->
   
   

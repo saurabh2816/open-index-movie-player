@@ -1,6 +1,8 @@
 import { Rating } from "./Rating"
 
-export interface ImdbMovieEntity {
+export interface Movie {
+    srtLink: string,
+    link: string,
     title: string ,
     year: string ,
     rated: string ,
@@ -15,7 +17,7 @@ export interface ImdbMovieEntity {
     country: string ,
     awards: string ,
     poster: string ,
-    ratings: Rating[],
+    // ratings: Rating[],
     metascore: string,
     imdbRating: string,
     imdbVotes: string,
@@ -26,8 +28,4 @@ export interface ImdbMovieEntity {
     production: string,
     website: string,
     response: string
-}
-export interface Movie {
-    info: ImdbMovieEntity,
-    url: string
 }

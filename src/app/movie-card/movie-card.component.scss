@@ -1,192 +1,174 @@
-.container {
-  /* background-color: gray; */
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  margin: 100px auto;
-}
+// .container {
+//   /* background-color: gray; */
+//   width: 100%;
+//   height: 300px;
+//   display: flex;
+//   justify-content: center;
+//   margin: 100px auto;
+// }
 
-.container div {
-    background-color: black;
-    width: 200px;
-    height: 100%;
-    border-radius: 20px;
-    transition: 400ms;
-    border: 1px solid white;
-    margin: 0 5px;
-    position: relative;
-    display: block;
-    border: 1px solid #eee;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    color: #f0efef;
-    // padding: 1rem;
-}
+// .container div {
+//     background-color: black;
+//     width: 200px;
+//     height: 100%;
+//     border-radius: 20px;
+//     transition: 400ms;
+//     border: 1px solid white;
+//     margin: 0 5px;
+//     position: relative;
+//     display: block;
+//     border: 1px solid #eee;
+//     /* background-repeat: no-repeat; */
+//     background-size: cover;
+//     color: #f0efef;
+//     // padding: 1rem;
+// }
 
-.container div:hover {
-  // height: 360px;
-  // width: 400px;
-  // transform: translateY(50px);
-  // z-index: 1;
-  transition: transform .5s;
-  -ms-transform: scale(1.4);
-  -webkit-transform: scale(1.4);  
-  transform: scale(1.4);
-  z-index: 10;
-}
+// .container div:hover {
+//   // height: 360px;
+//   // width: 400px;
+//   // transform: translateY(50px);
+//   // z-index: 1;
+//   transition: transform .5s;
+//   -ms-transform: scale(1.4);
+//   -webkit-transform: scale(1.4);  
+//   transform: scale(1.4);
+//   z-index: 10;
+// }
  
 
-// new codepen netflix card 
-:root {
-  --color-primary-400: rgba(255,255,255,0.5);
-  --color-primary-600: rgba(255,255,255,0.8);
-  --color-primary-700: rgba(255,255,255,1);
-}
+// // new codepen netflix card 
 
 
-html {
-  font-size: 10px;
-  font-family: sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background: #202020;
-}
+// .card {
+//   width: 373px;
+//   color: white;
+//   background: #181818;
+//   border-radius: 8px;
+//   font-size: 16px;
+//   overflow: hidden;
+//   font-family: sans-serif;
+// }
 
 
-.card {
-  width: 373px;
-  color: white;
-  background: #181818;
-  border-radius: 8px;
-  font-size: 16px;
-  overflow: hidden;
-  font-family: sans-serif;
-}
+// .card-preview-video {
+//   position: relative;
+//   height: 210px;
+//   background-size: cover;
+// }
 
+// .card-preview-video img {
+//   position: absolute;
+//   top: 20px;
+//   left: 10px;
+//   width: 50px;
+//   height: 25px;
+//   // background: transparent;
+// }
 
-.card-preview-video {
-  position: relative;
-  height: 210px;
-}
+// .card-preview-video img {
+//   max-width: 100%;
+// }
 
-.card-preview-video img {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  width: 50px;
-  height: 25px;
-  background: transparent;
-}
+// .card-details {
+//   display: grid;
+//   gap: 16px;
+//   padding: 16px;
+// }
 
-.card-preview-video video {
-  max-width: 100%;
-}
+// .card-actions {
+//   display: flex;
+//   gap: 12px;
+// }
 
-.card-details {
-  display: grid;
-  gap: 16px;
-  padding: 16px;
-}
+// .card-actions > button:last-child {
+//   margin-left: auto;
+// }
 
-.card-actions {
-  display: flex;
-  gap: 12px;
-}
+// .card-info {
+//   display: flex;
+//   align-items: center;
+//   gap: 6px;
+// }
 
-.card-actions > button:last-child {
-  margin-left: auto;
-}
+// .match-score {
+//   color: #46d369;
+// }
 
-.card-info {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
+// .maturity-rating {
+//   border: 1px solid var(--color-primary-400);
+//   padding: 1px 6px;
+// }
 
-.match-score {
-  color: #46d369;
-}
+// .feature {
+//   padding: 1px 6px;
+//   font-size: 11px;
+//   border: 1px solid var(--color-primary-400);
+//   border-radius: 2px;
+// }
 
-.maturity-rating {
-  border: 1px solid var(--color-primary-400);
-  padding: 1px 6px;
-}
+// .card-tags > span:not(:last-child)::after {
+//   content: '•';
+//   margin-left: 5px;
+//   color: var(--color-primary-400);
+// }
 
-.feature {
-  padding: 1px 6px;
-  font-size: 11px;
-  border: 1px solid var(--color-primary-400);
-  border-radius: 2px;
-}
+// /* Стили кнопок */
+// .btn {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0.8rem;
+//   border: 2px solid;
+//   cursor: pointer;
+// }
 
-.card-tags > span:not(:last-child)::after {
-  content: '•';
-  margin-left: 5px;
-  color: var(--color-primary-400);
-}
+// .btn-icon {
+//   border-radius: 50%;
+// }
 
-/* Стили кнопок */
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  border: 2px solid;
-  cursor: pointer;
-}
+// .btn-icon > svg {
+//   width: 1.8rem;
+//   height: 1.8rem;
+// }
 
-.btn-icon {
-  border-radius: 50%;
-}
+// .btn-primary {
+//   color: black;
+//   background: white;
+//   border-color: var(--color-primary-700);
+// }
 
-.btn-icon > svg {
-  width: 1.8rem;
-  height: 1.8rem;
-}
+// .btn-primary:hover {
+//   background-color: var(--color-primary-600);
+// }
 
-.btn-primary {
-  color: black;
-  background: white;
-  border-color: var(--color-primary-700);
-}
+// .btn-secondary {
+//   color: white;
+//   background-color: rgba(42,42,42,.6);
+//   border-color: var(--color-primary-400);
+// }
 
-.btn-primary:hover {
-  background-color: var(--color-primary-600);
-}
-
-.btn-secondary {
-  color: white;
-  background-color: rgba(42,42,42,.6);
-  border-color: var(--color-primary-400);
-}
-
-.btn-secondary:hover {
-  border-color: var(--color-primary-700);
-}
+// .btn-secondary:hover {
+//   border-color: var(--color-primary-700);
+// }
 
 
 
-/* NEW CSS */
-.card:hover {
-  transition: transform .5s;
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);  
-  transform: scale(1.2);
-  z-index: 10;
-}
+// /* NEW CSS */
+// .card:hover {
+//   transition: transform .5s;
+//   -ms-transform: scale(1.2);
+//   -webkit-transform: scale(1.2);  
+//   transform: scale(1.2);
+//   z-index: 10;
+//   width: 320px;
+// }
 
-.card-details {
-  display: none;
-}
+// .card-details {
+//   display: none;
+// }
 
-.card:hover .card-details{
-  display: grid !important;
-  z-index: 10;
-}
+// .card:hover .card-details{
+//   display: grid !important;
+//   z-index: 10;
+// }

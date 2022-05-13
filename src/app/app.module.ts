@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './services/movie.service';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { SaveMoviesComponent } from './save-movies/save-movies.component'
 
 
 
@@ -19,6 +20,7 @@ import {MatIconModule} from '@angular/material/icon'
     CustomVideoComponent,
     HomeComponent,
     MovieCardComponent,
+    SaveMoviesComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [

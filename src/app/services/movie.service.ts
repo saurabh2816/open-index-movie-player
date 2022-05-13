@@ -12,9 +12,15 @@ export class MovieService {
     constructor(private http: HttpClient) {}
 
     getMovies(): Observable<Movie[]> {
-        return this.http.get<Movie[]>(this.apiURL + 'getOne')
+        return this.http.get<Movie[]>(this.apiURL + 'getAll')
         .pipe(retry(1), catchError(this.handleError))
     }
+
+    saveMovies() {
+      return this.http.get<any>(this.apiURL + 'saveAllMoviesFromALink')
+      .pipe(retry(1), catchError(this.handleError))
+    }
+
 
     handleError(error: any) {
         let errorMessage = '';

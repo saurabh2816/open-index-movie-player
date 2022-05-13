@@ -1,4 +1,8 @@
 .movie-cards {
     display: flex;
     justify-content: space-between;
+
+    app-movie-card {
+        display: flex;
+    }
 }
