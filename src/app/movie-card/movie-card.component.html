@@ -47,3 +47,81 @@
   </div> -->
   
   
+  <!-- <swiper
+  #swiperVirtualRef
+  [slidesPerView]="8"
+  [spaceBetween]="20"
+  [virtual]="true"
+  slideActiveClass="swiper-active whyWouldIuseCustomClass"
+  [centeredSlides]="true"
+  [navigation]="true"
+  class="mySwiper"
+  id="mySwiperID"
+>
+  <ng-template swiperSlide *ngFor="let movie of data; index as i">
+    <div class="movie" [ngStyle]="{background: 'url(' + movie.poster + ')', backgroundSize: 'cover'}">
+      <div class="movie-name">{{ movie.title.substring(0, 5) }}</div>
+    </div>
+  </ng-template>
+
+</swiper> -->
+
+<!-- <app-custom-video *ngIf="clickPlay" [url]="movieClicked.link"></app-custom-video> -->
+
+<swiper class="mt-5"
+#swiperVirtualRef2
+[slidesPerView]="5"
+[freeMode]="true"
+[spaceBetween]="20"
+[virtual]="true"
+slideActiveClass="swiper-active"
+[centeredSlides]="true"
+[navigation]="true"
+id="mySwiperID2"
+>
+<ng-template swiperSlide *ngFor="let movie of data; index as i">
+  <div class="card2">
+    <div class="card__image" [ngStyle]="{background: 'url(' + movie.poster + ')'}">
+     
+      <h3>{{ movie.title }}</h3>
+      <div class="card__heading-sub">
+        <span class="actor">{{ getTwoActors(movie.actors) }} </span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel__row panel__buttons">
+        <div class="panel__icons">
+          <a  (click)="playMovie(movie)">
+            <i class="fa fa-play-circle" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="panel__icons">
+         <div class="imdbRating"> 
+           <img class="imdbLogo" src="../../assets/imdbLogo.svg" alt="">
+          <div class="movieRating">{{movie.imdbRating}}</div>
+         </div>
+        </div>
+
+
+        <div class="panel__icons card-modal-spawn">
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="panel__row info">
+        <span class="rating"><b>{{movie.rated}}</b></span><span class="year">{{movie.year}}</span><b>{{movie.runtime}}</b>
+      </div>
+      <div class="panel__row genres">{{getMovieGenres(movie.genre)}}r</div>
+    </div>
+  </div>
+</ng-template>
+
+</swiper>
+
+
+
+
+
+
+
+<!-- MODAL  -->

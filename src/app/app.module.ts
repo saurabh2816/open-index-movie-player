@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './services/movie.service';
-import {MatIconModule} from '@angular/material/icon';
-import { SaveMoviesComponent } from './save-movies/save-movies.component'
+import { SwiperModule } from 'swiper/angular';
+
 
 
 
@@ -20,7 +20,6 @@ import { SaveMoviesComponent } from './save-movies/save-movies.component'
     CustomVideoComponent,
     HomeComponent,
     MovieCardComponent,
-    SaveMoviesComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
@@ -31,7 +30,7 @@ import { SaveMoviesComponent } from './save-movies/save-movies.component'
     VgOverlayPlayModule,
     VgBufferingModule,
     HttpClientModule,
-    MatIconModule
+    SwiperModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent],

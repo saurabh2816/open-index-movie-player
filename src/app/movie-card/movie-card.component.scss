@@ -1,174 +1,420 @@
-// .container {
-//   /* background-color: gray; */
+
+// .swiper-container {
 //   width: 100%;
 //   height: 300px;
-//   display: flex;
-//   justify-content: center;
-//   margin: 100px auto;
+//   margin: 50px auto;
 // }
 
-// .container div {
-//     background-color: black;
-//     width: 200px;
-//     height: 100%;
-//     border-radius: 20px;
-//     transition: 400ms;
-//     border: 1px solid white;
-//     margin: 0 5px;
-//     position: relative;
-//     display: block;
-//     border: 1px solid #eee;
-//     /* background-repeat: no-repeat; */
-//     background-size: cover;
-//     color: #f0efef;
-//     // padding: 1rem;
+// .swiper-slide {
+//   background: #f1f1f1;
+//   color: #000;
+//   text-align: center;
+//   line-height: 300px;
 // }
 
-// .container div:hover {
-//   // height: 360px;
-//   // width: 400px;
-//   // transform: translateY(50px);
-//   // z-index: 1;
-//   transition: transform .5s;
-//   -ms-transform: scale(1.4);
-//   -webkit-transform: scale(1.4);  
-//   transform: scale(1.4);
-//   z-index: 10;
-// }
- 
-
-// // new codepen netflix card 
-
-
-// .card {
-//   width: 373px;
-//   color: white;
-//   background: #181818;
-//   border-radius: 8px;
-//   font-size: 16px;
-//   overflow: hidden;
-//   font-family: sans-serif;
-// }
-
-
-// .card-preview-video {
-//   position: relative;
-//   height: 210px;
+// .movie {
+//   height: 350px;
+//   border-radius: 20px;
 //   background-size: cover;
 // }
 
-// .card-preview-video img {
+
+
+
+#mySwiperID2 {
+
+.card2 {
+  background-color: red;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #203a43,
+    #0f2027,
+    #171717
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #203a43,
+    #0f2027,
+    #171717
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border-radius: 4.5px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.card__image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  background-color: gainsboro;
+  // background-image: url("https://66.media.tumblr.com/7c13ddf6566b4aaa6535589e79ed9797/tumblr_ow6wwn7Mhx1rp0vkjo1_540.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4.5px;
+  z-index: 1;
+  height: 350px;
+  background-size: cover !important;
+}
+
+.card__image::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(18, 36, 42, 0.96)
+  );
+  z-index: -1;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.card__image:hover::before {
+  opacity: 1;
+}
+
+.card__image h3 {
+  display: none;
+  margin: 0;
+}
+
+.card__image:hover h3 {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card__heading-sub {
+  display: none;
+  padding: 0.5em 1.5em;
+}
+
+.card__image:hover .card__heading-sub {
+  display: flex;
+}
+
+.card__heading-sub .age {
+  background-color: #666;
+  padding: 0 3px;
+}
+
+.card__heading-sub .actor::before {
+  content: "Starring:";
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+.card__heading-sub .actor {
+  padding: 0 5px;
+}
+
+.panel {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 12px;
+  height: 7.5rem;
+}
+
+.card2:hover > .panel {
+  display: flex;
+  animation: fadeIn 0.45s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.panel__buttons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-modal-spawn {
+  margin-left: auto;
+}
+
+.panel__icons {
+
+  .imdbLogo {
+    background: rgb(245, 197, 24);
+    margin-right: 0.25rem;
+  }
+
+
+  .fa-play-circle {
+    font-size: 3rem;
+    color: #1ed760;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .imdbRating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+
+    .movieRating {
+      font-weight: bold;
+      padding-left: 0.25rem;
+    }
+
+    .movierating {
+      padding-left: 5px;
+    }
+  }
+  .fa-star {
+    color: rgb(245, 197, 24);
+  }
+}
+
+.panel__icons:hover {
+  // height: 2rem;
+  // width: 2rem;
+  // background-color: whitesmoke;
+  // box-shadow: 0 0 0 2px #fff;
+  // border-radius: 20px;
+  // position: relative;
+  // cursor: pointer;
+  // font-size: 21px;
+}
+
+.panel__icons a {
+  color: #fff;
+}
+
+// .panel__icons i {
 //   position: absolute;
-//   top: 20px;
-//   left: 10px;
-//   width: 50px;
-//   height: 25px;
-//   // background: transparent;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
 // }
 
-// .card-preview-video img {
-//   max-width: 100%;
+// .panel__icons:hover i {
+//   color: #222;
 // }
 
-// .card-details {
-//   display: grid;
-//   gap: 16px;
-//   padding: 16px;
-// }
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .checked {
+  display: none;
+}
 
-// .card-actions {
-//   display: flex;
-//   gap: 12px;
-// }
+.custom-checkbox input[type="checkbox"]:checked ~ .checked {
+  display: inline-block;
+}
 
-// .card-actions > button:last-child {
-//   margin-left: auto;
-// }
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+  display: none;
+}
 
-// .card-info {
-//   display: flex;
-//   align-items: center;
-//   gap: 6px;
-// }
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5em;
+  font-size: 1.1rem;
+}
 
-// .match-score {
-//   color: #46d369;
-// }
+.rating {
+  color: lightgreen;
+  font-weight: 900;
+}
 
-// .maturity-rating {
-//   border: 1px solid var(--color-primary-400);
-//   padding: 1px 6px;
-// }
+.year {
+  font-size: 0.9rem;
+  align-self: center;
+}
 
-// .feature {
-//   padding: 1px 6px;
-//   font-size: 11px;
-//   border: 1px solid var(--color-primary-400);
-//   border-radius: 2px;
-// }
+.genres {
+  padding: 0 0.75em;
+  font-size: 0.8rem;
+}
 
-// .card-tags > span:not(:last-child)::after {
-//   content: '•';
-//   margin-left: 5px;
-//   color: var(--color-primary-400);
-// }
+.card__modal {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+}
 
-// /* Стили кнопок */
-// .btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 0.8rem;
-//   border: 2px solid;
-//   cursor: pointer;
-// }
+.card__modal-content {
+  position: relative;
+  max-width: 45rem;
+  margin: 0 auto;
+  color: #bbb;
+  line-height: 1.4rem;
+}
 
-// .btn-icon {
-//   border-radius: 50%;
-// }
+.card__modal-container {
+  position: relative;
+}
 
-// .btn-icon > svg {
-//   width: 1.8rem;
-//   height: 1.8rem;
-// }
+.card__modal-close {
+  position: absolute;
+  font-size: 1.5em;
+  border: none;
+  display: inline-block;
+  margin: 3px;
+  padding: 7px 12px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  filter: brightness(30%);
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 9;
+  border-radius: 20px 4px 20px 20px;
+}
 
-// .btn-primary {
-//   color: black;
-//   background: white;
-//   border-color: var(--color-primary-700);
-// }
+.card__modal-close:hover {
+  background-color: rgba(44, 83, 100, 0.45);
+  filter: brightness(100%);
+}
 
-// .btn-primary:hover {
-//   background-color: var(--color-primary-600);
-// }
+.display-topright {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
 
-// .btn-secondary {
-//   color: white;
-//   background-color: rgba(42,42,42,.6);
-//   border-color: var(--color-primary-400);
-// }
+.video-background {
+  width: 100%;
+}
 
-// .btn-secondary:hover {
-//   border-color: var(--color-primary-700);
-// }
+.video-foreground,
+.video-background video {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -3px;
+}
 
+.gradient {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(117, 19, 93, 0.73)
+  );
+  width: 100%;
+  z-index: 999;
+}
 
+.video-description {
+  position: relative;
+  padding: 1em 1.5em;
+  background: #0a1419;
+  z-index: 9;
+}
 
-// /* NEW CSS */
-// .card:hover {
-//   transition: transform .5s;
-//   -ms-transform: scale(1.2);
-//   -webkit-transform: scale(1.2);  
-//   transform: scale(1.2);
-//   z-index: 10;
-//   width: 320px;
-// }
+.video-description__header {
+  display: flex;
+  flex-direction: column;
+}
 
-// .card-details {
-//   display: none;
-// }
+.video-description h1 {
+  margin: 0.15em 0;
+}
 
-// .card:hover .card-details{
-//   display: grid !important;
-//   z-index: 10;
-// }
+.video-description__headline-sub {
+  margin: 1em 0;
+}
+
+.video-description__headline-sub span {
+  padding-right: 1em;
+}
+
+.video-description__headline-sub .quality {
+  background-color: #666;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.video-description .actor::before {
+  content: "Starring:";
+  padding: 0.5em 0;
+  font-weight: 600;
+}
+
+.video-description .actor::before {
+  content: "Starring:";
+  padding: 0.5em 0;
+  font-weight: 600;
+}
+
+.video-description .director::before {
+  content: "Director:";
+  padding: 0.5em 0;
+  font-weight: 600;
+}
+
+.video-description .modal-buttons {
+  width: auto;
+  margin: 1em 0;
+}
+
+.card__modal-section {
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .card__modal-container {
+    margin: 45px 30px;
+  }
+  
+  .video-description__header {
+    flex-direction: row;
+  }
+  
+  .video-foreground,
+  .video-background video {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .card__modal-section {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .video-description .modal-buttons {
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+}

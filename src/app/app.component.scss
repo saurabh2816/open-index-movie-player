@@ -1,1 +1,12 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+@import 'material-icons/iconfont/material-icons.scss';
+
+
+@import '../app/movie-card/movie-card.component.scss';
+@import '../app/custom-video/custom-video.component.scss';
+@import '../app/home/home.component.scss';
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #182f38;
+}
