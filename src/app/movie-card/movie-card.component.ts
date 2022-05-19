@@ -14,6 +14,7 @@ import SwiperCore , {
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { BehaviorSubject } from 'rxjs';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 SwiperCore.use([
   Navigation,
@@ -49,21 +50,33 @@ export class MovieCardComponent implements OnInit {
   currentMovieUrl: string;
   clickPlay: boolean = false;
   movieClicked: Movie;
-  
-
   show: boolean;
-  thumbs: any;
-  slides$ = new BehaviorSubject<string[]>(['']);
-  constructor(private cd: ChangeDetectorRef, private ngZone: NgZone) {}
-  slides = Array.from({ length: 5 }).map((el, index) => `Slide ${index + 1}`);
-  virtualSlides = Array.from({ length: 10 }).map((el, index) => `Slide ${index + 1}`);
+
+  closeModal: string; // modal
+
+  constructor(private cd: ChangeDetectorRef, private ngZone: NgZone, private modalService: NgbModal) {}
 
   ngOnInit() {  
 
   }
 
- 
 
+  // modal functions
+  triggerModal(content: any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((res) => {
+      this.closeModal = `Closed with: ${res}`;
+    }, (res) => {
+      this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
+    });
+  }
+  
+  getDismissReason(reason: any): string {
+
+      return  `with: ${reason}`;
+    
+  }
+
+  
   playMovie(movie: Movie) {
     this.clickPlay = true;
     this.movieClicked = movie;
@@ -71,17 +84,9 @@ export class MovieCardComponent implements OnInit {
 
   }
 
-  getSlides() {
-    this.slides$.next(Array.from({ length: 10 }).map((el, index) => `Slide ${index + 1}`));
-  }
-
-
-
   getMovieUrl(movie: Movie) {
     return movie.link;
   }
-
-
 
   onSwiper(swiper: any) {
     console.log(swiper);
@@ -96,8 +101,6 @@ export class MovieCardComponent implements OnInit {
 
   getMovieGenres(genres: string) {
     // Horror&nbsp; • &nbsp;Mystery&nbsp; • &nbsp;Thrille
-
     return genres.split(",").join(" • ");
-
   }
 }

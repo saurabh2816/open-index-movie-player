@@ -11,3 +11,7 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: #182f38;
 }
+
+.modal-open .modal {
+    z-index: 1000 !important;
+}

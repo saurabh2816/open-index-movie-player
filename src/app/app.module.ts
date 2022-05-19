@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './services/movie.service';
 import { SwiperModule } from 'swiper/angular';
 import { SimpleModalModule } from 'ngx-simple-modal';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -20,7 +21,7 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     AppComponent,
     CustomVideoComponent,
     HomeComponent,
-    MovieCardComponent,
+    MovieCardComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
@@ -32,10 +33,12 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     VgBufferingModule,
     HttpClientModule,
     SwiperModule,
-    SimpleModalModule
+    SimpleModalModule,
+    NgbModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent],
   
 })
 export class AppModule { }
+
