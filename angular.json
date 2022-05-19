@@ -33,7 +33,8 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/ngx-videogular/fonts/videogular.css",
-              "./node_modules/swiper/swiper.scss"
+              "./node_modules/swiper/swiper.scss",
+              "./node_modules/ngx-simple-modal/styles/simple-modal.css"
             ],
             "scripts": []
           },

@@ -10,6 +10,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './services/movie.service';
 import { SwiperModule } from 'swiper/angular';
+import { SimpleModalModule } from 'ngx-simple-modal';
 
 
 
@@ -30,7 +31,8 @@ import { SwiperModule } from 'swiper/angular';
     VgOverlayPlayModule,
     VgBufferingModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    SimpleModalModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent],

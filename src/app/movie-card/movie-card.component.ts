@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, Input, NgZone, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { Movie } from '../model/Movie';
-import { RouterModule } from '@angular/router';
 import SwiperCore , {
   Navigation,
   Pagination,
@@ -16,9 +15,6 @@ import SwiperCore , {
 import { SwiperComponent } from 'swiper/angular';
 import { BehaviorSubject } from 'rxjs';
 
-// @ts-ignore
-import  createSpringSlider from '../../assets/spring-slider.js' ;
-
 SwiperCore.use([
   Navigation,
   Pagination,
@@ -31,6 +27,8 @@ SwiperCore.use([
   Controller,
   EffectFade
 ]);
+
+
 
 @Component({
   selector: 'app-movie-card',
