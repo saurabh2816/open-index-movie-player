@@ -418,3 +418,43 @@
 }
 
 }
+
+
+
+
+
+// Custom styles for demo
+.spring-slider {
+  --swiper-navigation-color: #803205;
+  --swiper-pagination-color: #803205;
+  --swiper-pagination-bullet-inactive-color: #803205;
+  width: 100%;
+  height: 320px;
+  position: relative;
+  .swiper-pagination {
+    bottom: 0;
+    margin-bottom: -32px;
+  }
+  .swiper {
+    height: 100%;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  .swiper-slide {
+    box-sizing: border-box;
+    padding: 0 24px;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.spring-slider {
+  .swiper-slide {
+    transition-timing-function: cubic-bezier(.76, .09, .215, 1);
+  }
+}

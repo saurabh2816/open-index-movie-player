@@ -11,9 +11,13 @@ import SwiperCore , {
   Autoplay,
   Thumbs,
   Controller,
+  EffectFade
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 import { BehaviorSubject } from 'rxjs';
+
+// @ts-ignore
+import  createSpringSlider from '../../assets/spring-slider.js' ;
 
 SwiperCore.use([
   Navigation,
@@ -24,7 +28,8 @@ SwiperCore.use([
   Zoom,
   Autoplay,
   Thumbs,
-  Controller
+  Controller,
+  EffectFade
 ]);
 
 @Component({
@@ -55,7 +60,11 @@ export class MovieCardComponent implements OnInit {
   slides = Array.from({ length: 5 }).map((el, index) => `Slide ${index + 1}`);
   virtualSlides = Array.from({ length: 10 }).map((el, index) => `Slide ${index + 1}`);
 
-  ngOnInit() {}
+  ngOnInit() {  
+
+  }
+
+ 
 
   playMovie(movie: Movie) {
     this.clickPlay = true;

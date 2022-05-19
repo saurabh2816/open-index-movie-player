@@ -11,7 +11,7 @@ export class CustomVideoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("url: ", this.url);
+    console.log("custom player url: ", this.url);
   }
 
 }

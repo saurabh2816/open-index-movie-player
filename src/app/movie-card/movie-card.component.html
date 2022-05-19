@@ -71,12 +71,12 @@
 <swiper class="mt-5"
 #swiperVirtualRef2
 [slidesPerView]="5"
-[freeMode]="true"
 [spaceBetween]="20"
-[virtual]="true"
 slideActiveClass="swiper-active"
-[centeredSlides]="true"
 [navigation]="true"
+[slidesPerGroup]="4"
+[speed]="600"
+[parallax]="true"
 id="mySwiperID2"
 >
 <ng-template swiperSlide *ngFor="let movie of data; index as i">
@@ -117,6 +117,13 @@ id="mySwiperID2"
 </ng-template>
 
 </swiper>
+
+
+
+
+
+
+
 
 
 
