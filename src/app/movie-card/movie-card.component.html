@@ -125,17 +125,46 @@ id="mySwiperID2"
 <button class="btn btn-danger" (click)="triggerModal(modalData)">Open Modal</button>
 
 <ng-template #modalData let-modal>
-
+<div class="movieModal">
   <div class="modal-body">
-    <p><strong>Are you sure you want to delete <span class="text-primary">"Agatha Harkness"</span> profile?</strong></p>
     
-    <p>All data related to west view profile will be removed permanently.
-    </p>
+    <div class="movie" id="movie-card">
+      <div class="movie__data" id="movie-data">
+        <div class="movie__poster">
+          <span class="movie__poster--fill">
+            <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+          </span>
+          <span class="movie__poster--featured">
+            <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+          </span>
+        </div>
+        <div class="movie__details">
+          <h2 class="movie__title">Dead Poets Society</h2>
+          <ul class="movie__tags list--inline">
+            <li class="movie__rated">PG</li>
+            <li class="movie__year">1989</li>
+            <li class="movie__year">Comedy, Drama</li>
+          </ul>
+          <p class="movie__plot">Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.</p>
+          <div class="movie__credits">
+            <p><strong>Written by:</strong> Tom Schulman</p>
+            <p><strong>Directed by:</strong> Peter Weir</p>
+            <p><strong>Starring:</strong></p>
+            <ul class="movie__actors list--inline">
+              <li>Robin Williams</li><li> Robert Sean Leonard</li><li> Ethan Hawke</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <input class="movie__search" id="movie-search" type="text" placeholder="Enter a movie title">
+    </div>
+
   </div>
 
   <!-- <div class="modal-footer">
     <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
   </div> -->
+</div>
 
 </ng-template>
 </div>
