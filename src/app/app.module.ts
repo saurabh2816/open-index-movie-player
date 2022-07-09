@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomVideoComponent } from './custom-video/custom-video.component';
 import { HomeComponent } from './home/home.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MovieCarouselComponent } from './movie-carousel/movie-carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './services/movie.service';
 import { SwiperModule } from 'swiper/angular';
@@ -21,7 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     CustomVideoComponent,
     HomeComponent,
-    MovieCardComponent
+    MovieCarouselComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ],
   imports: [

@@ -18,9 +18,10 @@ export class HomeComponent implements OnInit {
     this.getMoviesLoaded = true;
 
     this.movieService.getMovies().subscribe( data => {
-      console.log("home: ", data);
+
        this.movieList = data;
        this.getMoviesLoaded = true;
+       
     })
   } 
 }

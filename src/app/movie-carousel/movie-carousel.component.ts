@@ -32,16 +32,16 @@ SwiperCore.use([
 
 
 @Component({
-  selector: 'app-movie-card',
+  selector: 'app-movie-carousel',
   host: {
     '(error)':'updateUrl()',
     '[src]':'src'
    },
-  templateUrl: './movie-card.component.html',
-  styleUrls: ['./movie-card.component.scss'],
+  templateUrl: './movie-carousel.component.html',
+  styleUrls: ['./movie-carousel.component.scss'],
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class MovieCardComponent implements OnInit {
+export class MovieCarouselComponent implements OnInit {
   
   @ViewChild('swiperRef', { static: false }) swiperRef?: SwiperComponent;
   @Input() data: any[];
