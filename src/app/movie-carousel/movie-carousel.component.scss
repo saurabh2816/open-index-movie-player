@@ -452,10 +452,10 @@ $bp-sm: 400px;
     overflow: hidden;
     margin: $base-spacing auto;
     width: 100%;
-    max-width: 800px;
+    // max-width: 800px;
     background-color: white;
     border-radius: $base-radius;
-    box-shadow: rgba(black, 0.2) 0 30px 18px -24px;
+    box-shadow:none;
     
     &__data {
       position: relative;
@@ -465,7 +465,7 @@ $bp-sm: 400px;
       min-height: $poster-span * 2;
         
       @media (min-width: $bp-md) {
-        flex-direction: row;
+        flex-direction: column;
       }
     }
     
@@ -551,7 +551,7 @@ $bp-sm: 400px;
     
     &__details {
       flex: 1;
-      padding: $base-spacing * 2;
+      padding: 4rem;
       
       @media (min-width: $bp-md) {
         padding: $base-spacing * 6;
@@ -570,4 +570,26 @@ $bp-sm: 400px;
       text-align: center;
     }
   }
+}
+
+.modal-content {
+  min-width: 70vw;
+
+}
+.modal-dialog {
+  max-width: none !important;
+}
+
+div#movie-card {
+  margin: 0;
+}
+
+.movie__poster {
+  height: 50vh;
+  background: teal;
+  width: 100% !important;
+  background-image: url(https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg);
+  filter: blur(10px);
+  background-size: cover;
+  background-position: top;
 }
