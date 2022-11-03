@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CustomVideoComponent implements OnInit {
 
-  @Input() url: string;
+  @Input() url: any;
+  @Input() srt: string;
   constructor() { }
 
   ngOnInit(): void {

@@ -105,7 +105,7 @@ id="mySwiperID2"
 
 
         <div class="panel__icons card-modal-spawn">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <i class="fa fa-chevron-down open-modal" (click)="triggerModal(movieModal, movie)" aria-hidden="true"></i>
         </div>
       </div>
       <div class="panel__row info">
@@ -122,37 +122,39 @@ id="mySwiperID2"
 
 <!-- MODAL  -->
 <div>
-<button class="btn btn-danger" (click)="triggerModal(modalData)">Open Modal</button>
+<!-- <button class="btn btn-danger" (click)="triggerModal(movieModal)">Open Modal</button> -->
+<button class="btn btn-danger">Open Modal</button>
 
-<ng-template #modalData let-modal>
-  {{data[0] | json }}
-<div class="movieModal">
-  <div class="modal-body">
+<ng-template #movieModal let-modal>
+
+  <div class="movieModal">
+    <div class="modal-body">
     
     <div class="movie" id="movie-card">
 
       <div class="movie__data" id="movie-data">
         
-        <div class="movie__poster">
+        <div class="movie__poster" style="background-image:url({{modalMovie.poster}})">
           <span class="movie__poster--featured">
-            <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+            <img src={{modalMovie.poster}}>
           </span>
         </div>
-
+ 
 
         <div class="movie__details">
-
+          <app-custom-video [url]="movdalMovieLink"></app-custom-video> 
+          <span class="material-icons playbutton">play_circle</span> 
           <div class="left-container">
-            <h2 class="movie-title">{{data[0].title}}</h2>
+            <h2 class="movie-title">{{modalMovie.title}}</h2>
             <ul class="movie-tags list--inline">
-              <li class="movie-rated">{{data[0].rated}}</li>
-              <li class="movie-year">{{data[0].year}}</li>
-              <li class="movie-genre">{{data[0].genre}}</li>
-              <li class="movie-runtime">{{data[0].runtime}}</li> 
+              <li class="movie-rated">{{modalMovie.rated}}</li>
+              <li class="movie-year">{{modalMovie.year}}</li>
+              <li class="movie-genre">{{modalMovie.genre}}</li>
+              <li class="movie-runtime">{{modalMovie.runtime}}</li> 
   
               <div class="movie-plot">
                 <div class="movie-plot">
-                  <p>{{data[0].plot}}</p>
+                  <p>{{modalMovie.plot}}</p>
                 </div>
               </div>
             </ul>
@@ -161,22 +163,22 @@ id="mySwiperID2"
           <div class="right-container">
             <div class="movie-cast">
               <h3 class="movie-cast__heading">Cast</h3>
-              <div class="movie-cast__actors">{{data[0].actors}}</div>
+              <div class="movie-cast__actors">{{modalMovie.actors}}</div>
             </div>
 <br/>
             <div class="movie-genre">
               <h3 class="movie-genre__heading">Genre</h3>
-              <div class="movie-genre__genre">{{data[0].genre}}</div>
+              <div class="movie-genre__genre">{{modalMovie.genre}}</div>
             </div>
 <br/>
             <div class="movie-rating">
               <h3 class="movie-rating__heading">Ratings</h3>
               <div class="movie-rating__wrapper">
                 <div class="movie-rating__metascore">
-                  Metascore: {{data[0].metascore}}
+                  Metascore: {{modalMovie.metascore}}
                 </div>
                 <div class="movie-rating__imdbRating">
-                  Imdb Rating: {{data[0].imdbRating}}
+                  Imdb Rating: {{modalMovie.imdbRating}}
                 </div>
               </div>
             </div>
@@ -185,16 +187,6 @@ id="mySwiperID2"
             
           </div>
 
-       
-          <p class="movie-plot">Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.</p>
-          <div class="movie-credits">
-            <p><strong>Written by:</strong> Tom Schulman</p>
-            <p><strong>Directed by:</strong> Peter Weir</p>
-            <p><strong>Starring:</strong></p>
-            <ul class="movie-actors list--inline">
-              <li>Robin Williams</li><li> Robert Sean Leonard</li><li> Ethan Hawke</li>
-            </ul>
-          </div>
         </div>
 
       </div>

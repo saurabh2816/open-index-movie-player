@@ -51,6 +51,8 @@ export class MovieCarouselComponent implements OnInit {
   clickPlay: boolean = false;
   movieClicked: Movie;
   show: boolean;
+  modalMovie: any;
+  movdalMovieLink: any;
 
   closeModal: string; // modal
 
@@ -62,7 +64,9 @@ export class MovieCarouselComponent implements OnInit {
 
 
   // modal functions
-  triggerModal(content: any) {
+  triggerModal(content: any, data: any) {
+    this.modalMovie = data;
+    this.movdalMovieLink = data.link;
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((res) => {
       this.closeModal = `Closed with: ${res}`;
     }, (res) => {

@@ -194,6 +194,13 @@
   .fa-star {
     color: rgb(245, 197, 24);
   }
+
+  i.fa.fa-chevron-down.open-modal{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
 }
 
 .panel__icons:hover {
@@ -529,6 +536,12 @@ $bp-sm: 400px;
     &__details {
       flex: 1;
       padding: 4rem;
+
+      .playbutton {
+        font-size: 5rem;
+        color: #1ed760;
+        position: relative;
+      }
       
       @media (min-width: $bp-md) {
         padding: $base-spacing * 6;
@@ -565,7 +578,7 @@ div#movie-card {
   height: 50vh;
   background: teal;
   width: 100% !important;
-  background-image: url(https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg);
+  // background-image: url(https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg);
   filter: blur(10px);
   background-size: cover;
   background-position: top;
