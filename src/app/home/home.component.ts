@@ -7,7 +7,7 @@ import {MovieService} from '../services/movie.service';
 })
 export class HomeComponent implements OnInit {
 
-  movieList: any;
+  data: any;
   getMoviesLoaded: boolean = false;
   defaultCardPoster: string = "saurabhrana.com";
 
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
     this.movieService.getMovies().subscribe( data => {
 
-       this.movieList = data;
+       this.data = data;
        this.getMoviesLoaded = true;
        
     })

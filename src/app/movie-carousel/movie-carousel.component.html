@@ -125,36 +125,78 @@ id="mySwiperID2"
 <button class="btn btn-danger" (click)="triggerModal(modalData)">Open Modal</button>
 
 <ng-template #modalData let-modal>
+  {{data[0] | json }}
 <div class="movieModal">
   <div class="modal-body">
     
     <div class="movie" id="movie-card">
+
       <div class="movie__data" id="movie-data">
+        
         <div class="movie__poster">
-          <span class="movie__poster--fill">
-            <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
-          </span>
           <span class="movie__poster--featured">
             <img src="https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
           </span>
         </div>
+
+
         <div class="movie__details">
-          <h2 class="movie__title">Dead Poets Society</h2>
-          <ul class="movie__tags list--inline">
-            <li class="movie__rated">PG</li>
-            <li class="movie__year">1989</li>
-            <li class="movie__year">Comedy, Drama</li>
-          </ul>
-          <p class="movie__plot">Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.</p>
-          <div class="movie__credits">
+
+          <div class="left-container">
+            <h2 class="movie-title">{{data[0].title}}</h2>
+            <ul class="movie-tags list--inline">
+              <li class="movie-rated">{{data[0].rated}}</li>
+              <li class="movie-year">{{data[0].year}}</li>
+              <li class="movie-genre">{{data[0].genre}}</li>
+              <li class="movie-runtime">{{data[0].runtime}}</li> 
+  
+              <div class="movie-plot">
+                <div class="movie-plot">
+                  <p>{{data[0].plot}}</p>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div class="right-container">
+            <div class="movie-cast">
+              <h3 class="movie-cast__heading">Cast</h3>
+              <div class="movie-cast__actors">{{data[0].actors}}</div>
+            </div>
+<br/>
+            <div class="movie-genre">
+              <h3 class="movie-genre__heading">Genre</h3>
+              <div class="movie-genre__genre">{{data[0].genre}}</div>
+            </div>
+<br/>
+            <div class="movie-rating">
+              <h3 class="movie-rating__heading">Ratings</h3>
+              <div class="movie-rating__wrapper">
+                <div class="movie-rating__metascore">
+                  Metascore: {{data[0].metascore}}
+                </div>
+                <div class="movie-rating__imdbRating">
+                  Imdb Rating: {{data[0].imdbRating}}
+                </div>
+              </div>
+            </div>
+
+            
+            
+          </div>
+
+       
+          <p class="movie-plot">Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.</p>
+          <div class="movie-credits">
             <p><strong>Written by:</strong> Tom Schulman</p>
             <p><strong>Directed by:</strong> Peter Weir</p>
             <p><strong>Starring:</strong></p>
-            <ul class="movie__actors list--inline">
+            <ul class="movie-actors list--inline">
               <li>Robin Williams</li><li> Robert Sean Leonard</li><li> Ethan Hawke</li>
             </ul>
           </div>
         </div>
+
       </div>
       <!-- <input class="movie__search" id="movie-search" type="text" placeholder="Enter a movie title"> -->
     </div>
