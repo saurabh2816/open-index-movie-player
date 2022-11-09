@@ -454,6 +454,14 @@ $bp-sm: 400px;
 
 
 .movieModal {
+
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  
+
+  .modal-body {
+    padding: 0;
+  }
+
   .movie {
     position: relative;
     overflow: hidden;
@@ -464,7 +472,7 @@ $bp-sm: 400px;
     border-radius: $base-radius;
     box-shadow:none;
     
-    &__data {
+    &__wrapper {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -492,11 +500,13 @@ $bp-sm: 400px;
       font-size: 0.75em;
       color: darkgray;
     }
+
     
     &__poster {
       position: relative;
       display: flex;
       width: 100%;
+
       
       @media (min-width: $bp-md) {
         margin-right: $base-spacing;
@@ -532,17 +542,28 @@ $bp-sm: 400px;
         }
       }
     }
+
+    &__playbutton {
+      
+      height: 0;
+      padding-left: 2rem;
+
+      span.playbutton {
+
+        font-size: 6rem;
+        color: #1ed760;
+        position: relative;
+        top: -3rem;
+      }
+      
+    }
     
     &__details {
       flex: 1;
-      padding: 4rem;
+      // padding: 4rem;
+      // margin-top: -4rem;
+      padding: 4rem  2rem 2rem 3rem !important;
 
-      .playbutton {
-        font-size: 5rem;
-        color: #1ed760;
-        position: relative;
-      }
-      
       @media (min-width: $bp-md) {
         padding: $base-spacing * 6;
       }
@@ -579,7 +600,7 @@ div#movie-card {
   background: teal;
   width: 100% !important;
   // background-image: url(https://m.media-amazon.com/images/M/MV5BOGYwYWNjMzgtNGU4ZC00NWQ2LWEwZjUtMzE1Zjc3NjY3YTU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg);
-  filter: blur(10px);
+  filter: blur(3px);
   background-size: cover;
   background-position: top;
 }

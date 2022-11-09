@@ -4,3 +4,18 @@
 @import "../node_modules/swiper/swiper-bundle.css";
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('assets/fonts/NetflixSans-Regular.otf');
+}
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('assets/fonts/NetflixSans-Light.otf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('assets/fonts/NetflixSans-Bold.otf');
+    font-weight: 800;
+}

@@ -132,18 +132,22 @@ id="mySwiperID2"
     
     <div class="movie" id="movie-card">
 
-      <div class="movie__data" id="movie-data">
+      <div class="movie__wrapper" id="movie-data">
         
-        <div class="movie__poster" style="background-image:url({{modalMovie.poster}})">
-          <span class="movie__poster--featured">
-            <img src={{modalMovie.poster}}>
-          </span>
+        <div class="moive__poster__wrapper">
+          <div class="movie__poster" style="background-image:url({{modalMovie.poster}})">
+            <span class="movie__poster--featured">
+              <img src={{modalMovie.poster}}>
+            </span>
+          </div>
+          <div class="movie__playbutton">
+            <span class="material-icons playbutton">play_circle</span> 
+          </div>
         </div>
  
 
         <div class="movie__details">
-          <app-custom-video [url]="movdalMovieLink"></app-custom-video> 
-          <span class="material-icons playbutton">play_circle</span> 
+          <!-- <app-custom-video [url]="movdalMovieLink"></app-custom-video>  -->
           <div class="left-container">
             <h2 class="movie-title">{{modalMovie.title}}</h2>
             <ul class="movie-tags list--inline">
