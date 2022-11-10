@@ -1,72 +1,4 @@
-<!-- <div class="container" *ngFor="let movie of data; index as i" >
-    <div class="item" 
-        (click)="openMovie(movie.url, i)"
-        >
-        {{movie.info.Title}} :  {{movie.info.imdbRating}}
-        <img src={{movie.info.poster}} onError="this.src='https://savethesumatrantigerfmp.weebly.com/uploads/5/0/7/6/50766355/7434310.jpg?263'"/>
-            <app-custom-video *ngIf="i==currentMovieClicked" [url]="currentMovieUrl"></app-custom-video> 
-
-    </div>
-</div> -->
-
-<!-- 
-  old code before bootstrap carousel 
-  <div class='card' *ngFor="let movie of data"> 
-    <div class='card-preview-video' [ngStyle]="{background: 'url(' + movie.poster + ')'}">
-       <video autoplay muted src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'></video> 
-       <img src={{d.info.poster}}/> 
-     </div> 
-    
-    <div class='card-details'>
-      <div class='card-actions'>
-        <button class='btn btn-icon btn-primary'>
-          <svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z" fill="currentColor"></path></svg>
-        </button>
-  
-        <button class='btn btn-icon btn-secondary'>
-          <svg viewBox="0 0 24 24"><path d="M13 11h8v2h-8v8h-2v-8H3v-2h8V3h2v8z" fill="currentColor"></path></svg>
-        </button>
-  
-  
-        <button class='btn btn-icon btn-secondary'>
-          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M5.689 7.924L4.387 9.442 12.038 16l7.651-6.558-1.302-1.518-6.349 5.442z"></path></svg>
-        </button>
-      </div>
-  
-      <div class='card-info'>
-        <span class='match-score'>97% Match</span>
-        <span class='maturity-rating'>18+</span>
-        <span>6 Seasons</span>
-        <span class='feature'>HD</span>
-      </div>
-  
-      <div class='card-tags'>
-        <span>{{movie.genre}}</span>
-      </div>
-    </div>
-  </div> -->
-  
-  
-  <!-- <swiper
-  #swiperVirtualRef
-  [slidesPerView]="8"
-  [spaceBetween]="20"
-  [virtual]="true"
-  slideActiveClass="swiper-active whyWouldIuseCustomClass"
-  [centeredSlides]="true"
-  [navigation]="true"
-  class="mySwiper"
-  id="mySwiperID"
->
-  <ng-template swiperSlide *ngFor="let movie of data; index as i">
-    <div class="movie" [ngStyle]="{background: 'url(' + movie.poster + ')', backgroundSize: 'cover'}">
-      <div class="movie-name">{{ movie.title.substring(0, 5) }}</div>
-    </div>
-  </ng-template>
-
-</swiper> -->
-
-<app-custom-video *ngIf="clickPlay" [url]="movieClicked.link"></app-custom-video>
+<!-- <app-custom-video *ngIf="clickPlay" [url]="movieClicked.link"></app-custom-video> -->
 
 <swiper class="mt-5"
 #swiperVirtualRef2
@@ -148,7 +80,6 @@ id="mySwiperID2"
  
 
         <div class="movie__details">
-          <!-- <app-custom-video [url]="movdalMovieLink"></app-custom-video>  -->
           <div class="left-container">
          
             <h2 class="movie-title">{{modalMovie.title}}</h2>

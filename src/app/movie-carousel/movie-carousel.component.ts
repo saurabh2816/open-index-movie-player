@@ -15,6 +15,7 @@ import SwiperCore , {
 import { SwiperComponent } from 'swiper/angular';
 import { BehaviorSubject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute, Router } from '@angular/router';
 
 SwiperCore.use([
   Navigation,
@@ -56,7 +57,7 @@ export class MovieCarouselComponent implements OnInit {
 
   closeModal: string; // modal
 
-  constructor(private cd: ChangeDetectorRef, private ngZone: NgZone, private modalService: NgbModal) {}
+  constructor(private cd: ChangeDetectorRef, private ngZone: NgZone, private modalService: NgbModal, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {  
 
@@ -84,7 +85,8 @@ export class MovieCarouselComponent implements OnInit {
   playMovie(movie: Movie) {
     this.clickPlay = true;
     this.movieClicked = movie;
-    this.cd.detectChanges();
+
+    this.router.navigate(['/play'], { queryParams: { url: movie.link } });
 
   }
 

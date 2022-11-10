@@ -649,3 +649,21 @@ div#movie-card {
   background-size: cover;
   background-position: top;
 }
+
+
+.video-player {
+  background: red;
+  height: 100vh;
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+}
+
+.swiper {
+  height: 470px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: 38%;
+}

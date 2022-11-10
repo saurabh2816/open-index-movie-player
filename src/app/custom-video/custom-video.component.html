@@ -30,9 +30,216 @@
 
   </div> -->
 
+
+
+
+<!-- 
+  <section class="container">
+    <input type="checkbox" id="replay">
+    <label for="replay" class="control-button --play">
+        Play
+        <div class="control-button__sub">
+            the animation
+        </div>
+    </label>
+    <label for="replay" class="control-button --reload">
+        Reload
+        <div class="control-button__sub">
+            click here to reset the animation
+        </div>
+    </label>
+
+    <div class="logo">
+        <div class="uno"></div>
+        <div class="due"></div>
+        <div class="tre"></div>
+    </div>
+</section> -->
+
+
+
+<div id="container" [ngClass]="animationDone ? 'animation-done' : ''">
+    <!-- Edit the letter attr to: N, E, T, F, L, I or X -->
+       <div id="netflixintro" letter="N">
+        <div class="helper-1">
+          <div class="effect-brush">
+            <span class="fur-31"></span>
+            <span class="fur-30"></span>
+            <span class="fur-29"></span>
+            <span class="fur-28"></span>
+            <span class="fur-27"></span>
+            <span class="fur-26"></span>
+            <span class="fur-25"></span>
+            <span class="fur-24"></span>
+            <span class="fur-23"></span>
+            <span class="fur-22"></span>
+            <span class="fur-21"></span>
+            <span class="fur-20"></span>
+            <span class="fur-19"></span>
+            <span class="fur-18"></span>
+            <span class="fur-17"></span>
+            <span class="fur-16"></span>
+            <span class="fur-15"></span>
+            <span class="fur-14"></span>
+            <span class="fur-13"></span>
+            <span class="fur-12"></span>
+            <span class="fur-11"></span>
+            <span class="fur-10"></span>
+            <span class="fur-9"></span>
+            <span class="fur-8"></span>
+            <span class="fur-7"></span>
+            <span class="fur-6"></span>
+            <span class="fur-5"></span>
+            <span class="fur-4"></span>
+            <span class="fur-3"></span>
+            <span class="fur-2"></span>
+            <span class="fur-1"></span>
+          </div>
+          <div class="effect-lumieres">
+            <span class="lamp-1"></span>
+            <span class="lamp-2"></span>
+            <span class="lamp-3"></span>
+            <span class="lamp-4"></span>
+            <span class="lamp-5"></span>
+            <span class="lamp-6"></span>
+            <span class="lamp-7"></span>
+            <span class="lamp-8"></span>
+            <span class="lamp-9"></span>
+            <span class="lamp-10"></span>
+            <span class="lamp-11"></span>
+            <span class="lamp-12"></span>
+            <span class="lamp-13"></span>
+            <span class="lamp-14"></span>
+            <span class="lamp-15"></span>
+            <span class="lamp-16"></span>
+            <span class="lamp-17"></span>
+            <span class="lamp-18"></span>
+            <span class="lamp-19"></span>
+            <span class="lamp-20"></span>
+            <span class="lamp-21"></span>
+            <span class="lamp-22"></span>
+            <span class="lamp-23"></span>
+            <span class="lamp-24"></span>
+            <span class="lamp-25"></span>
+            <span class="lamp-26"></span>
+            <span class="lamp-27"></span>
+            <span class="lamp-28"></span>
+          </div>
+        </div>
+        <div class="helper-2">
+          <div class="effect-brush">
+            <span class="fur-31"></span>
+            <span class="fur-30"></span>
+            <span class="fur-29"></span>
+            <span class="fur-28"></span>
+            <span class="fur-27"></span>
+            <span class="fur-26"></span>
+            <span class="fur-25"></span>
+            <span class="fur-24"></span>
+            <span class="fur-23"></span>
+            <span class="fur-22"></span>
+            <span class="fur-21"></span>
+            <span class="fur-20"></span>
+            <span class="fur-19"></span>
+            <span class="fur-18"></span>
+            <span class="fur-17"></span>
+            <span class="fur-16"></span>
+            <span class="fur-15"></span>
+            <span class="fur-14"></span>
+            <span class="fur-13"></span>
+            <span class="fur-12"></span>
+            <span class="fur-11"></span>
+            <span class="fur-10"></span>
+            <span class="fur-9"></span>
+            <span class="fur-8"></span>
+            <span class="fur-7"></span>
+            <span class="fur-6"></span>
+            <span class="fur-5"></span>
+            <span class="fur-4"></span>
+            <span class="fur-3"></span>
+            <span class="fur-2"></span>
+            <span class="fur-1"></span>
+          </div>
+        </div>
+        <div class="helper-3">
+          <div class="effect-brush">
+            <span class="fur-31"></span>
+            <span class="fur-30"></span>
+            <span class="fur-29"></span>
+            <span class="fur-28"></span>
+            <span class="fur-27"></span>
+            <span class="fur-26"></span>
+            <span class="fur-25"></span>
+            <span class="fur-24"></span>
+            <span class="fur-23"></span>
+            <span class="fur-22"></span>
+            <span class="fur-21"></span>
+            <span class="fur-20"></span>
+            <span class="fur-19"></span>
+            <span class="fur-18"></span>
+            <span class="fur-17"></span>
+            <span class="fur-16"></span>
+            <span class="fur-15"></span>
+            <span class="fur-14"></span>
+            <span class="fur-13"></span>
+            <span class="fur-12"></span>
+            <span class="fur-11"></span>
+            <span class="fur-10"></span>
+            <span class="fur-9"></span>
+            <span class="fur-8"></span>
+            <span class="fur-7"></span>
+            <span class="fur-6"></span>
+            <span class="fur-5"></span>
+            <span class="fur-4"></span>
+            <span class="fur-3"></span>
+            <span class="fur-2"></span>
+            <span class="fur-1"></span>
+          </div>
+        </div>
+        <div class="helper-4">
+          <div class="effect-brush">
+            <span class="fur-31"></span>
+            <span class="fur-30"></span>
+            <span class="fur-29"></span>
+            <span class="fur-28"></span>
+            <span class="fur-27"></span>
+            <span class="fur-26"></span>
+            <span class="fur-25"></span>
+            <span class="fur-24"></span>
+            <span class="fur-23"></span>
+            <span class="fur-22"></span>
+            <span class="fur-21"></span>
+            <span class="fur-20"></span>
+            <span class="fur-19"></span>
+            <span class="fur-18"></span>
+            <span class="fur-17"></span>
+            <span class="fur-16"></span>
+            <span class="fur-15"></span>
+            <span class="fur-14"></span>
+            <span class="fur-13"></span>
+            <span class="fur-12"></span>
+            <span class="fur-11"></span>
+            <span class="fur-10"></span>
+            <span class="fur-9"></span>
+            <span class="fur-8"></span>
+            <span class="fur-7"></span>
+            <span class="fur-6"></span>
+            <span class="fur-5"></span>
+            <span class="fur-4"></span>
+            <span class="fur-3"></span>
+            <span class="fur-2"></span>
+            <span class="fur-1"></span>
+          </div>
+        </div>
+    </div>
+    </div> 
+
+<div class="video-player">
   <vg-player (onPlayerReady)="onPlayerReady($event)">
-    <vg-overlay-play></vg-overlay-play>
-    <vg-buffering></vg-buffering>
+    <!-- <vg-overlay-play></vg-overlay-play> -->
+    <vg-overlay-play vgFor="my-video"></vg-overlay-play>
+
+    <vg-buffering vgFor="my-video"></vg-buffering>
 
     <vg-scrub-bar>
         <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
@@ -57,8 +264,9 @@
     
     </vg-controls>
 
-    <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" >
+    <video [vgMedia]="$any(media)" #media id="my-video" preload="true" autoplay="true" >
         <!-- <source src="https://www.ibrahimabah.com/ibfilms/Harry.Potter-The.Ultimate.Collection.%20I%20-%20VIII%20.%202001-2011.1080p.Bluray.x264.anoXmous/Harry%20Potter%203/Harry.Potter.And.The.Prisoner.Of.Azkaban.2004.UEE.1080p.Bluray.x264.anoXmous_.mp4" type="video/mp4"> -->
         <source src={{url}} type="video/mp4">
     </video>
 </vg-player>
+</div>

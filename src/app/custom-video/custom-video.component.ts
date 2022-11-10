@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VgAPI } from 'ngx-videogular';
 
 @Component({
@@ -11,10 +12,19 @@ export class CustomVideoComponent implements OnInit {
   @Input() url: any;
   @Input() srt: string;
   api: VgAPI;
-  constructor() { }
+  animationDone = false;
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
 
   ngOnInit(): void {
     console.log("custom player url: ", this.url);
+    this.url = this.route.snapshot.queryParamMap.get('url');
+    console.log("custom player url: ", this.url);
+
+    setTimeout(()=>{                           //<<<---using ()=> syntax
+      this.animationDone = true;
+     }, 4000);
+    
   }
 
   onPlayerReady(api: VgAPI) {
