@@ -30,7 +30,7 @@
 
   </div> -->
 
-  <vg-player>
+  <vg-player (onPlayerReady)="onPlayerReady($event)">
     <vg-overlay-play></vg-overlay-play>
     <vg-buffering></vg-buffering>
 
@@ -39,16 +39,22 @@
         <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time> 
     </vg-scrub-bar>
 
-    <vg-controls>
-        <vg-play-pause></vg-play-pause>
-        <vg-playback-button></vg-playback-button>
+    <vg-controls [vgAutohideTime]="5">
+        
+        <div class="left-container">
+            <vg-play-pause></vg-play-pause>
+            
+            <!-- subtitles -->
+            <!-- <vg-track-selector></vg-track-selector> -->
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+            <vg-playback-button></vg-playback-button>
+        </div>
 
-
-        <vg-track-selector></vg-track-selector>
-        <vg-mute></vg-mute>
-        <vg-volume></vg-volume>
-
+    <div class="right-container">
         <vg-fullscreen></vg-fullscreen>
+    </div>        
+    
     </vg-controls>
 
     <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" >

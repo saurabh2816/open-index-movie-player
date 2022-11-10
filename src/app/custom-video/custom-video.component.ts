@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { VgAPI } from 'ngx-videogular';
 
 @Component({
   selector: 'app-custom-video',
@@ -9,10 +10,17 @@ export class CustomVideoComponent implements OnInit {
 
   @Input() url: any;
   @Input() srt: string;
+  api: VgAPI;
   constructor() { }
 
   ngOnInit(): void {
     console.log("custom player url: ", this.url);
   }
+
+  onPlayerReady(api: VgAPI) {
+    this.api = api;
+    this.api.play();
+  }
+
 
 }

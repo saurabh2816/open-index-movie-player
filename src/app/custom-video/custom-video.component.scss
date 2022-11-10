@@ -1,0 +1,41 @@
+vg-scrub-bar {
+    height: 2rem;
+    bottom: 4rem;
+    align-items: center;
+    background-color: #0d0d0d54;   
+}
+
+vg-scrub-bar-current-time {
+    .background {
+        background-color: #ffc107 !important;
+    }
+    height: 2rem;
+}
+
+vg-scrub-bar-buffering-time {
+    height: 2rem;
+}
+
+vg-controls {
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+}
